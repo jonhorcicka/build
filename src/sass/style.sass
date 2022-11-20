@@ -2,6 +2,8 @@
 @import "fonts"
 @import "mixins"
 
+*
+    box-sizing: border-box
 
 body
     @include light
@@ -15,11 +17,26 @@ img
     max-width: 1170px
     width: 96%
     margin: 0 auto
+    
 
 .button
     background-color: $buttons
     color: $accent
     border: none
+    cursor: pointer
+    @include bold
+    border-radius: 10px
+    padding: 18px 47px
+    &:hover
+        background-color: darken($buttons, 10%)
+
+.input
+    border-radius: 10px
+    border: 1px solid $border-input
+    background-color: #ffffff
+    padding: 25px
+    font-size: 15px
+        
 
 // Hlavička webů
 .header
@@ -56,11 +73,10 @@ img
 
     &__button
         padding: 18px 48px
-        border-radius: 10px
         margin-left: 30px
         font-size: 13px
-        @include bold
-
+        
+        
 // Hlavní sekce
 .main
     background-color: $background
@@ -116,9 +132,13 @@ img
             display: flex
             align-items: center
             margin-bottom: 30px
+            &:last-child
+                margin-bottom: 0
             @media (max-width: 767px)
                 margin-bottom: 20px
                 margin-left: 26px
+            
+
         &__image
             border: 2px solid #ffd200
             width: 40px
@@ -140,5 +160,93 @@ img
             @media (max-width: 767px)
                 font-size: 12px
                 line-height: normal
+
+// Nabídková sekce
+.offer
+    padding: 90px 0
+    background: url('../img/offer-bg.jpeg') no-repeat
+    background-position: center right
+    background-size: contain
+    position: relative
+    @media (max-width: 1200px)
+        background-size: cover
+    @media (max-width: 767px)
+        background: #fff
+        padding: 50px 0
+    &:before
+        content: ''
+        width: 50%
+        height: 100%
+        position: absolute
+        background-color: #fff
+        top: 0
+        left: 0
+        
+
+    &-block
+        width: 50%
+        padding-right: 90px
+        position: relative
+        @media (max-width: 767px)
+            width: 100%
+            padding-right: 0
+        
+    &-title
+        font-size: 24px
+        color: $accent
+        line-height: 35px
+        margin: 0 0 25px 0
+        max-width: 350px
+        @include bold
+    &-subtitle
+        font-size: 16px
+        color: $accent
+        display: inline-block
+        margin-bottom: 30px
+        max-width: 260px
+     
+    &__input
+        width: 240px
+        height: 65px
+        margin-bottom: 30px
+        @media (max-width: 1200px)
+            width: 100%
+            margin-bottom: 15px
+        &:first-child
+            margin-right: 10px
+
+    &__button
+        width: 100%
+        min-height: 70px
+        @media (max-width: 1200px)
+            font-size: 13px
+        @media (max-width: 767px)
+            font-size: 16px
+    &__info
+        margin-top: 31px
+        display: flex
+        justify-content: space-between
+        @media (max-width: 767px)
+            flex-direction: column
+            margin-top: 25px
+   
+    
+    
+    &__contact
+        line-height: 24px
+        font-size: 15px
+        @media (max-width: 767px)
+            margin-top: 5px
+            width: 50%
+             
+        
+    &__phone
+        font-size: 15px
+        @include bold
+        display: block
+
+        
+        
+        
 
         

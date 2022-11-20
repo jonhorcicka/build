@@ -12,6 +12,10 @@
   font-weight: normal;
   font-style: normal;
 }
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Museo Sans Light", sans-serif;
   font-weight: 300;
@@ -32,6 +36,22 @@ img {
   background-color: #ffd200;
   color: #333;
   border: none;
+  cursor: pointer;
+  font-family: "Museo Sans Bold", sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 18px 47px;
+}
+.button:hover {
+  background-color: #cca800;
+}
+
+.input {
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  padding: 25px;
+  font-size: 15px;
 }
 
 .header {
@@ -73,11 +93,8 @@ img {
 }
 .header__button {
   padding: 18px 48px;
-  border-radius: 10px;
   margin-left: 30px;
   font-size: 13px;
-  font-family: "Museo Sans Bold", sans-serif;
-  font-weight: 700;
 }
 
 .main {
@@ -159,6 +176,9 @@ img {
   align-items: center;
   margin-bottom: 30px;
 }
+.main-list__item:last-child {
+  margin-bottom: 0;
+}
 @media (max-width: 767px) {
   .main-list__item {
     margin-bottom: 20px;
@@ -192,4 +212,114 @@ img {
     font-size: 12px;
     line-height: normal;
   }
+}
+
+.offer {
+  padding: 90px 0;
+  background: url("../img/offer-bg.jpeg") no-repeat;
+  background-position: center right;
+  background-size: contain;
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .offer {
+    background-size: cover;
+  }
+}
+@media (max-width: 767px) {
+  .offer {
+    background: #fff;
+    padding: 50px 0;
+  }
+}
+.offer:before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+}
+.offer-block {
+  width: 50%;
+  padding-right: 90px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .offer-block {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+.offer-title {
+  font-size: 24px;
+  color: #333;
+  line-height: 35px;
+  margin: 0 0 25px 0;
+  max-width: 350px;
+  font-family: "Museo Sans Bold", sans-serif;
+  font-weight: 700;
+}
+.offer-subtitle {
+  font-size: 16px;
+  color: #333;
+  display: inline-block;
+  margin-bottom: 30px;
+  max-width: 260px;
+}
+.offer__input {
+  width: 240px;
+  height: 65px;
+  margin-bottom: 30px;
+}
+@media (max-width: 1200px) {
+  .offer__input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+.offer__input:first-child {
+  margin-right: 10px;
+}
+.offer__button {
+  width: 100%;
+  min-height: 70px;
+}
+@media (max-width: 1200px) {
+  .offer__button {
+    font-size: 13px;
+  }
+}
+@media (max-width: 767px) {
+  .offer__button {
+    font-size: 16px;
+  }
+}
+.offer__info {
+  margin-top: 31px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .offer__info {
+    flex-direction: column;
+    margin-top: 25px;
+  }
+}
+.offer__contact {
+  line-height: 24px;
+  font-size: 15px;
+}
+@media (max-width: 767px) {
+  .offer__contact {
+    margin-top: 5px;
+    width: 50%;
+  }
+}
+.offer__phone {
+  font-size: 15px;
+  font-family: "Museo Sans Bold", sans-serif;
+  font-weight: 700;
+  display: block;
 }/*# sourceMappingURL=style.css.map */
