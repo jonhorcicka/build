@@ -36,6 +36,13 @@ img
     background-color: #ffffff
     padding: 25px
     font-size: 15px
+
+.section-title
+    font-size: 30px
+    @include bold
+    text-align: center
+    line-height: 45px
+    
         
 // Hlavička webů
 .header
@@ -232,6 +239,32 @@ img
         font-size: 15px
         @include bold
         display: block
+
+// Portfoliová sekce
+.portfolio
+    padding: 100px 0
+    background-color: $background
+    background: $background url(../img/portfolio-bg.png) left repeat-y
+    background-size: 50%
+    @media (max-width: 767px)
+            padding: 43px 0 
+    &__title
+        margin-bottom: 100px
+        color: $accent
+    &__arrows
+        max-width: 120px
+        display: flex
+        justify-content: space-between
+        margin: auto
+        margin-top: 70px
+
+.arrows__left, .arrows__right
+    cursor: pointer
+
+.slider
+    &__image
+        margin: auto
+
 
         
 .modal
