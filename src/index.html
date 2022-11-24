@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
 <!-- Jméno záložky -->
     <title>HouseFix</title>
@@ -34,11 +35,11 @@
             <div class="container">
                 <div class="main-block">
                     <div class="main-text">
-                        <h1 class="main-text__title">Dekorace vnitřních <br>
+                        <h1 class="main-text__title wow animate__animated animate__fadeInTopLeft" >Dekorace vnitřních <br>
                             prostorů "na klíč"</h1>
-                        <span class="main-text__subtitle">se zárukou kvality, stanovené ve smlouvě</span>
+                        <span class="main-text__subtitle wow animate__animated animate__fadeInLeft">se zárukou kvality, stanovené ve smlouvě</span>
 
-                        <ul class="main-list">
+                        <ul class="main-list wow animate__animated animate__fadeInBottomLeft">
                             <li class="main-list__item">
                                 <div class="main-list__image">
                                     <img src="img/clock.svg" alt="Hodiny">
@@ -68,7 +69,7 @@
                         </ul>
 
                     </div>
-                    <div class="main-image">
+                    <div class="main-image wow animate__animated animate__fadeInRight" data-wow-delay=".2s">
                         <img src="img/main-img.png" alt="Ilustrace">
                     </div>
         </section>
@@ -111,14 +112,14 @@
             </h2>
 
             <div class="slider">
-                <div class="slider__item"><img class="slider__image" src="img/portfolio1.jpeg" alt="Obrázek 1"></div>
-                <div class="slider__item"><img class="slider__image" src="img/portfolio2.jpeg" alt="Obrázek 2"></div>
-                <div class="slider__item"><img class="slider__image" src="img/portfolio3.jpeg" alt="Obrázek 3"></div>
+                <div class="slider__item wow animate__animated animate__fadeInDown" data-wow-delay=".4s"><img class="slider__image" src="img/portfolio1.jpeg" alt="Obrázek 1"></div>
+                <div class="slider__item wow animate__animated animate__fadeInDown" data-wow-delay=".4s"><img class="slider__image" src="img/portfolio2.jpeg" alt="Obrázek 2"></div>
+                <div class="slider__item wow animate__animated animate__fadeInDown" data-wow-delay=".4s"><img class="slider__image" src="img/portfolio3.jpeg" alt="Obrázek 3"></div>
                 <div class="slider__item"><img class="slider__image" src="img/portfolio1.jpeg" alt="Obrázek 1"></div>
                 <div class="slider__item"><img class="slider__image" src="img/portfolio2.jpeg" alt="Obrázek 2"></div>
                 <div class="slider__item"><img class="slider__image" src="img/portfolio3.jpeg" alt="Obrázek 3"></div>
             </div>
-            <div class="arrows portfolio__arrows">
+            <div class="arrows portfolio__arrows wow animate__animated animate__fadeInDown" data-wow-delay=".4s">
                 <div class="arrows__left">
                     <img src="img/arrowLeft.png" alt="">
                 </div>
@@ -136,7 +137,7 @@
             </h2>
             <span class="section-subtitle price__subtitle">Ceny za naše služby</span>
             <div class="cards">
-                <div class="card price__card">
+                <div class="card price__card wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
                     <div class="card__image">
                         <img src="img/price1.jpeg" alt="Koupelna">
                     </div>
@@ -145,7 +146,7 @@
                             <a href="#" class="card__link">Zjistit ceny</a>
                         </div>
                 </div>
-                <div class="card price__card">
+                <div class="card price__card wow animate__animated animate__fadeInUp" data-wow-delay=".4s">
                     <div class="card__image">
                             <img src="img/price3.jpeg" alt="Obývací pokoj">
                     </div>
@@ -154,7 +155,7 @@
                         <a href="#" class="card__link">Zjistit ceny</a>
                     </div>
                 </div>
-                <div class="card price__card">
+                <div class="card price__card wow animate__animated animate__fadeInUp" data-wow-delay=".6s">
                     <div class="card__image">
                         <img src="img/price2.jpeg" alt="Kanceláře">
                     </div>
@@ -163,7 +164,7 @@
                         <a href="#" class="card__link">Zjistit ceny</a>
                     </div>
                 </div>
-                <div class="card price__card">
+                <div class="card price__card wow animate__animated animate__fadeInUp" data-wow-delay=".6s">
                     <div class="card__image">
                         <img src="img/price6.jpeg" alt="Nové budovy">
                     </div>
@@ -172,7 +173,7 @@
                         <a href="#" class="card__link">Zjistit ceny</a>
                     </div>
                 </div>              
-                <div class="card price__card">
+                <div class="card price__card wow animate__animated animate__fadeInUp" data-wow-delay=".8s">
                     <div class="card__image">
                         <img src="img/price4.jpeg" alt="Kuchyně">
                     </div>
@@ -181,7 +182,7 @@
                         <a href="#" class="card__link">Zjistit ceny</a>
                     </div>
                 </div>
-                <div class="card price__card">
+                <div class="card price__card wow animate__animated animate__fadeInUp" data-wow-delay="1s">
                     <div class="card__image">
                         <img src="img/price5.jpeg" alt="Chaty a chalupy">
                     </div>
@@ -196,7 +197,7 @@
         </div>
     </section>
     </main>  
-
+<!-- Modulální okno (JavaScript) -->
     <div class="modal" id="modal">
         <div class="modal-dialog">
             <button class="modal-dialog__close" id="close">&times;</button>
@@ -208,6 +209,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
     
 </body>
