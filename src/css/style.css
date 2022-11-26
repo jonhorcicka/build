@@ -481,6 +481,134 @@ img {
   transition: 0.2s;
 }
 
+.steps {
+  padding-bottom: 120px;
+}
+@media (max-width: 767px) {
+  .steps {
+    padding-bottom: 80px;
+  }
+}
+.steps__title {
+  margin-bottom: 60px;
+}
+@media (max-width: 767px) {
+  .steps__title {
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 30px;
+    margin-top: 5px;
+  }
+}
+.steps__subtitle {
+  margin-bottom: 75px;
+}
+@media (max-width: 767px) {
+  .steps__subtitle {
+    font-size: 14px;
+    margin-bottom: 35px;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .icons .icon:not(.icon:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.icon {
+  text-align: center;
+  position: relative;
+}
+.icon:last-child::after {
+  display: none;
+}
+.icon::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -95px;
+  display: block;
+  width: 72px;
+  height: 25px;
+  background-image: url("../img/iconArrowRight.png");
+}
+@media (max-width: 767px) {
+  .icon::after {
+    display: none;
+  }
+}
+.icon__image {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border: 3px solid #ffd200;
+  background-color: #fff;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .icon__image {
+    margin-bottom: 20px;
+  }
+}
+.icon__image img {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.icon__text {
+  max-width: 140px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+}
+@media (max-width: 767px) {
+  .icon__text {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.notice {
+  background-color: #ffc000;
+  padding: 100px 0;
+}
+@media (max-width: 767px) {
+  .notice {
+    padding: 70px 0 100px 0;
+  }
+}
+.notice__text {
+  text-align: center;
+  line-height: 50px;
+  font-size: 32px;
+  max-width: 750px;
+  margin: auto;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .notice__text {
+    font-size: 18px;
+    line-height: normal;
+    padding: 0px 25px;
+  }
+}
+
 .modal {
   position: fixed;
   left: 0;

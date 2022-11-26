@@ -333,8 +333,7 @@ img
             background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%)
             opacity: 0
             transition: .2s
-             
-        
+                 
     &__link
         display: inline-block
         @include bold
@@ -356,6 +355,103 @@ img
             height: 3px
             background-color: $main-color
             transition: .2s
+
+// Kroková sekce 
+.steps
+    padding-bottom: 120px
+    @media (max-width: 767px)
+        padding-bottom: 80px
+    &__title
+        margin-bottom: 60px
+        @media (max-width: 767px)
+            font-size: 18px
+            line-height: normal
+            margin-bottom: 30px
+            margin-top: 5px
+           
+    &__subtitle
+        margin-bottom: 75px
+        @media (max-width: 767px)
+            font-size: 14px
+            margin-bottom: 35px
+
+.icons
+    display: flex
+    justify-content: space-between
+    @media (max-width: 767px)
+        display: flex
+        flex-direction: column
+        align-items: center
+    & .icon:not(.icon:last-child)
+        @media (max-width: 767px)
+            margin-bottom: 30px
+    
+.icon
+    text-align: center
+    position: relative
+    &:last-child
+        &::after
+            display: none
+    
+    &::after
+        content: ''
+        position: absolute
+        top: - 10px
+        right: - 95px
+        display: block
+        width: 72px
+        height: 25px
+        background-image: url('../img/iconArrowRight.png')
+        @media (max-width: 767px)
+            display: none
+        
+
+    &__image
+        width: 100px
+        height: 100px
+        margin: auto
+        border: 3px solid $main-color
+        background-color: #fff
+        border-radius: 100px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 30px
+        @media (max-width: 767px)
+            margin-bottom: 20px
+    
+        img
+            width: 30px
+            height: 30px
+            display: inline-block
+    &__text
+        max-width: 140px
+        display: inline-block
+        font-size: 14px
+        line-height: 20px
+        @media (max-width: 767px)
+            font-size: 12px
+            line-height: 16px         
+       
+.notice
+    background-color: $secondary
+    padding: 100px 0
+    @media (max-width: 767px)
+        padding: 70px 0 100px 0
+    &__text
+        text-align: center
+        line-height: 50px
+        font-size: 32px
+        max-width: 750px
+        margin: auto
+        font-weight: 400
+        @media (max-width: 767px)
+            font-size: 18px
+            line-height: normal
+            padding: 0px 25px 
+            
+
+            
 
 
 
@@ -388,3 +484,6 @@ img
         
 
         
+
+        
+    
