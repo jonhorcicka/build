@@ -111,6 +111,11 @@ img {
   margin-left: 30px;
   font-size: 13px;
 }
+@media (max-width: 767px) {
+  .header__button {
+    font-size: 10px;
+  }
+}
 
 .main {
   background-color: #f5f5f5;
@@ -276,12 +281,25 @@ img {
   font-family: "Museo Sans Bold", sans-serif;
   font-weight: 700;
 }
+@media (max-width: 767px) {
+  .offer-title {
+    font-size: 18px;
+    line-height: normal;
+    padding-left: 20px;
+  }
+}
 .offer-subtitle {
   font-size: 16px;
   color: #333;
   display: inline-block;
   margin-bottom: 30px;
   max-width: 260px;
+}
+@media (max-width: 767px) {
+  .offer-subtitle {
+    font-size: 14px;
+    padding-left: 20px;
+  }
 }
 .offer__input {
   width: 240px;
@@ -291,7 +309,7 @@ img {
 @media (max-width: 1200px) {
   .offer__input {
     width: 100%;
-    margin-bottom: 15px;
+    margin: 0 20px 15px 0;
   }
 }
 .offer__input:first-child {
@@ -320,6 +338,7 @@ img {
   .offer__info {
     flex-direction: column;
     margin-top: 25px;
+    margin-left: 20px;
   }
 }
 .offer__contact {
@@ -347,7 +366,7 @@ img {
 }
 @media (max-width: 767px) {
   .portfolio {
-    padding: 43px 0;
+    padding: 40px 0 60px 0;
   }
 }
 .portfolio__title {
@@ -615,7 +634,7 @@ img {
 @media (max-width: 767px) {
   .info {
     padding-top: 60px;
-    padding-bottom: 90px;
+    padding-bottom: 45px;
   }
 }
 .info__block {
@@ -716,7 +735,7 @@ img {
   .brief {
     background-image: url("../img/brief-color-bg.png"), url("../img/brief-bg.jpeg");
     background-position: top center, center bottom;
-    background-size: 100% 50%, cover;
+    background-size: 100% 45%, cover;
     background-repeat: repeat-x, no-repeat;
     padding: 50px 0;
   }
@@ -785,6 +804,9 @@ img {
   .interview__title {
     font-size: 18px;
     margin-bottom: 40px;
+    line-height: normal;
+    margin-left: 20px;
+    margin-right: 5px;
   }
 }
 .interview__subtitle {
@@ -796,11 +818,17 @@ img {
   .interview__subtitle {
     font-size: 14px;
     margin-bottom: 30px;
+    margin-left: 20px;
   }
 }
 .interview-list {
   list-style-type: none;
   padding: 0;
+}
+@media (max-width: 1200px) {
+  .interview-list {
+    margin-left: 20px;
+  }
 }
 .interview-list__item {
   display: flex;
@@ -847,11 +875,13 @@ img {
     font-size: 18px;
     margin-bottom: 40px;
     margin-top: 150px;
+    line-height: 25.35px;
   }
 }
 @media (max-width: 767px) {
   .form__title {
     margin-bottom: 25px;
+    margin-top: 70px;
   }
 }
 .form__subtitle {
@@ -877,6 +907,97 @@ img {
   .form__description {
     margin-bottom: 60px;
   }
+}
+
+.footer {
+  position: relative;
+}
+@media (max-width: 767px) {
+  .footer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.map {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 767px) {
+  .map {
+    width: 100%;
+    position: relative;
+  }
+}
+
+.contacts {
+  flex-basis: 50%;
+  padding-top: 100px;
+  padding-left: 200px;
+}
+@media (max-width: 767px) {
+  .contacts {
+    padding-top: 0;
+    padding-left: 25px;
+    flex-basis: 100%;
+  }
+}
+.contacts-block {
+  display: flex;
+  justify-content: flex-end;
+}
+.contacts__title {
+  font-family: "Museo Sans Bold", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 100px;
+}
+@media (max-width: 767px) {
+  .contacts__title {
+    margin-top: 65px;
+    margin-bottom: 35px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.contacts-list {
+  padding: 0;
+  list-style-type: none;
+}
+.contacts-list__icon {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 20px;
+}
+.contacts-list__item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .contacts-list__item {
+    margin-bottom: 60px;
+  }
+}
+.contacts-list__item strong {
+  font-family: "Museo Sans Bold", sans-serif;
+  font-weight: 700;
+}
+.contacts-list__text {
+  line-height: 1.4;
+}
+.contacts-list__text a {
+  color: #000;
+  text-decoration: none;
+}
+.contacts-list__text a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .modal {

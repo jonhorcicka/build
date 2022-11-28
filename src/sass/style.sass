@@ -88,6 +88,8 @@ img
         padding: 18px 48px
         margin-left: 30px
         font-size: 13px
+        @media (max-width: 767px)
+            font-size: 10px
         
         
 // Hlavní sekce
@@ -207,19 +209,26 @@ img
         margin: 0 0 25px 0
         max-width: 350px
         @include bold
+        @media (max-width: 767px)
+            font-size: 18px
+            line-height: normal
+            padding-left: 20px
     &-subtitle
         font-size: 16px
         color: $accent
         display: inline-block
         margin-bottom: 30px
         max-width: 260px
+        @media (max-width: 767px)
+            font-size: 14px
+            padding-left: 20px
     &__input
         width: 240px
         height: 65px
         margin-bottom: 30px
         @media (max-width: 1200px)
             width: 100%
-            margin-bottom: 15px
+            margin: 0 20px 15px 0  
         &:first-child
             margin-right: 10px
     &__button
@@ -236,12 +245,13 @@ img
         @media (max-width: 767px)
             flex-direction: column
             margin-top: 25px
+            margin-left: 20px
     &__contact
         line-height: 24px
         font-size: 15px
         @media (max-width: 767px)
             margin-top: 5px
-            width: 50%  
+            width: 50%
     &__phone
         font-size: 15px
         @include bold
@@ -254,7 +264,7 @@ img
     background: $background url(../img/portfolio-bg.png) left repeat-y
     background-size: 50%
     @media (max-width: 767px)
-            padding: 43px 0 
+            padding: 40px 0 60px 0
     &__title
         margin-bottom: 100px
         color: $accent
@@ -455,7 +465,7 @@ img
     padding: 100px 0
     @media (max-width: 767px)
         padding-top: 60px
-        padding-bottom: 90px
+        padding-bottom: 45px
     &__block
         margin-bottom: 150px
         @media (max-width: 767px)
@@ -526,7 +536,7 @@ img
     @media (max-width: 767px)
         background-image: url('../img/brief-color-bg.png'), url('../img/brief-bg.jpeg')
         background-position: top center, center bottom
-        background-size: 100% 50%, cover
+        background-size: 100% 45%, cover
         background-repeat: repeat-x, no-repeat
         padding: 50px 0 
     &-block
@@ -556,6 +566,7 @@ img
         @media (max-width: 767px)
             margin-top: 0px
             margin-bottom: 30px
+            
 
 .interview
     padding-right: 70px
@@ -569,6 +580,9 @@ img
         @media (max-width: 1200px)
             font-size: 18px
             margin-bottom: 40px
+            line-height: normal
+            margin-left: 20px
+            margin-right: 5px
     &__subtitle
         font-size: 16px
         margin-bottom: 100px
@@ -576,9 +590,14 @@ img
         @media (max-width: 1200px)
             font-size: 14px
             margin-bottom: 30px
+            margin-left: 20px
+            
     &-list
         list-style-type: none
         padding: 0
+        @media (max-width: 1200px)
+            margin-left: 20px
+            
         &__item
             display: flex
             align-items: center
@@ -612,8 +631,11 @@ img
             font-size: 18px
             margin-bottom: 40px
             margin-top: 150px
+            line-height: 25.35px
         @media (max-width: 767px)
             margin-bottom: 25px
+            margin-top: 70px
+            
     &__subtitle
         font-size: 16px
         margin-bottom: 50px
@@ -627,12 +649,72 @@ img
         font-size: 15px
         @media (max-width: 767px)
             margin-bottom: 60px
-             
+
+// Spodní sekce 
+.footer
+    position: relative
+    @media (max-width: 767px)
+        display: flex
+        flex-direction: column-reverse
+.map
+    width: 50% 
+    position: absolute
+    top: 0  
+    left: 0
+    @media (max-width: 767px)
+        width: 100%
+        position: relative
+               
+.contacts
+    flex-basis: 50%
+    padding-top: 100px
+    padding-left: 200px
+    @media (max-width: 767px)
+        padding-top: 0
+        padding-left: 25px
+        flex-basis: 100%
+    &-block
+        display: flex
+        justify-content: flex-end
         
+    &__title
+        @include bold
+        font-size: 24px
+        line-height: 33px
+        margin-bottom: 100px
+        @media (max-width: 767px)
+            margin-top: 65px
+            margin-bottom: 35px
+            font-size: 18px
+            line-height: 24px
 
+    &-list
+        padding: 0
+        list-style-type: none
+        &__icon
+            width: 20px
+            height: 20px
+            text-align: center
+            line-height: 20px
+            margin-right: 20px
+        &__item
+            display: flex
+            align-items: flex-start
+            margin-bottom: 40px
+            @media (max-width: 767px)
+                margin-bottom: 60px
+            strong
+                @include bold
+        &__text
+            line-height: 1.4
+            a
+                color: $text-color
+                text-decoration: none
+                &:hover
+                    text-decoration: underline
+                    cursor: pointer
 
-
-        
+// Modulální okno        
 .modal
     position: fixed
     left: 0
