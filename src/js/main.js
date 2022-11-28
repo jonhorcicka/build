@@ -32,6 +32,35 @@ $(document).ready(function(){
         modal.removeClass('modal_active');
     });
 
+    // Validace formuláře
+    $('#offer-form').validate({
+      rules: {
+        first_name: "required",
+        phone: "required",
+      },
+      messages: {
+        first_name: "Uveďte vaše jméno",
+        phone: "Uveďte váš telefon",      
+      }
+    });
+
+    $('#brief-form').validate({
+      rules: {
+        username: "required",
+        phone: "required",
+        email: {
+          required: true,
+          email: true,
+        }
+      },
+      messages: {
+        username: "Uveďte vaše jméno",
+        email: "Potřebujeme váš email",
+        phone: "Uveďte váš telefon",      
+      }
+    });
+
+
     // Napojení slideru
     $('.slider').slick({
         slidesToShow: 3,

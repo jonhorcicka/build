@@ -904,4 +904,8 @@ img {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.error {
+  border: 2px solid red;
 }/*# sourceMappingURL=style.css.map */
